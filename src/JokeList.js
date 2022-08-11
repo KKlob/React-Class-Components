@@ -43,8 +43,7 @@ class JokeList extends React.Component {
   }
 
   generateNewJokes = async () => {
-    await this.setState({ jokes: [] });
-    this.getAllJokes();
+    this.setState({ jokes: [] }, this.getAllJokes);
   }
 
   render() {
